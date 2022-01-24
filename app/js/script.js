@@ -21,12 +21,14 @@ let pplValue;
 let evnt;
 let currentItem;
 let splitterOn = false;
+let resetBtnDisabled = true;
 
 
 
 //initial resets
 
 function initialReset() {
+  resetBtnDisabled = true;
   splitterOn = false;
   billInput.value = '';
   peopleInput.value = '';
@@ -41,14 +43,8 @@ initialReset();
 function disableResetBtn() {
   resetBtn.disabled = true;
   resetBtn.classList.remove('activated');
-
-  resetBtn.addEventListener('mouseover', function () {
-    resetBtn.classList.remove('hover');
-  })
-  resetBtn.addEventListener('mouseout', function () {
-    resetBtn.classList.remove('hover');
-  })
-
+  resetBtn.classList.remove('hover');
+  resetBtnDisabled = true;
 }
 
 disableResetBtn();
@@ -106,6 +102,7 @@ function resetCustom() {
 
 function getBillVal() {
   splitterOn = true;
+  resetBtnDisabled = false;
   billValue = Number(billInput.value);
   getTotals();
 }
@@ -149,12 +146,15 @@ function resetSplitter() {
 function enableResetBtn() {
   resetBtn.disabled = false;
   resetBtn.classList.add('activated');
+
+if(!resetBtnDisabled) {
   resetBtn.addEventListener('mouseover', function () {
     resetBtn.classList.add('hover')
   })
   resetBtn.addEventListener('mouseout', function () {
     resetBtn.classList.remove('hover');
   })
+}
 }
 
 
