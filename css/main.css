@@ -40,8 +40,8 @@ input {
 }
 @media (min-width: 41rem) {
   .wrapper {
+    height: 90vh;
     grid-template-columns: minmax(0, 41rem);
-    height: 100vh;
     justify-content: center;
   }
 }

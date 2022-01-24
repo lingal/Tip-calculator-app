@@ -32,6 +32,7 @@ function initialReset() {
   peopleInput.value = '';
   dsplTip.innerHTML = '0.00';
   dsplTotal.innerHTML = '0.00';
+  pplValue = '';
 }
 
 initialReset();
@@ -41,14 +42,12 @@ function disableResetBtn() {
   resetBtn.disabled = true;
   resetBtn.classList.remove('activated');
 
-
   resetBtn.addEventListener('mouseover', function () {
     resetBtn.classList.remove('hover');
   })
   resetBtn.addEventListener('mouseout', function () {
     resetBtn.classList.remove('hover');
   })
-
 
 }
 

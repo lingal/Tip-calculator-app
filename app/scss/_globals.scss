@@ -36,8 +36,8 @@ input {
 .wrapper {
   grid-template-rows: 9rem auto;
   @include for-tablet {
+    height: 90vh;
     grid-template-columns: minmax(0, 41rem);
-    height: 100vh;
     justify-content: center;
   }
   @include for-desktop {
@@ -68,4 +68,3 @@ input {
     font-size: $fontSizeInput;
   }
 }
-
