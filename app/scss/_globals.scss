@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $clr-body;
+  font-family: $ff;
+}
+
+input {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: $fontSizeInput;
+  border-radius: 5px;
+  font-family: $ff;
+  font-weight: $fw-700;
+  cursor: pointer;
+  color: $clr-bgCyan;
+}
+
+.grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+}
+.wrapper {
+  grid-template-rows: 9rem auto;
+  @include for-tablet {
+    grid-template-columns: minmax(0, 41rem);
+    height: 100vh;
+    justify-content: center;
+  }
+  @include for-desktop {
+    grid-template-columns: minmax(0, 65rem);
+    align-content: center;
+  }
+}
+
+.section-title {
+  color: $clr-fontCyan;
+  font-weight: $fw-700;
+  margin-bottom: 0.5rem;
+}
+
+.input-container {
+  height: 3.125rem;
+  display: flex;
+  align-items: center;
+  background-color: $clr-bgInput;
+  padding-inline: 1.25rem;
+  img {
+    height: 1rem;
+  }
+  input {
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    font-size: $fontSizeInput;
+  }
+}
+

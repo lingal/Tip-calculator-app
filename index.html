@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="wrapper grid">
+      <header>
+        <img src="./images/logo.svg" alt="Splitter" />
+      </header>
+      <main>
+        <div class="main-content grid">
+          <div class="main-content__left grid">
+            <!--  bill input -->
+            <div class="bill">
+              <p class="section-title">Bill</p>
+              <div class="input-container">
+                <img src="./images/icon-dollar.svg" alt="dollar sign" />
+                <input type="text" data-bill="bill" placeholder="0" />
+              </div>
+            </div>
+            <!-- end of bill input -->
+            <!--  select tip  input -->
+            <div class="tip">
+              <p class="section-title">Select Tip %</p>
+              <div class="buttons grid">
+                <input type="button" value="5%" data-tip />
+                <input type="button" value="10%" data-tip />
+                <input type="button" value="15%" data-tip />
+                <input type="button" value="25%" data-tip />
+                <input type="button" value="50%" data-tip />
+                <input
+                  type="text"
+                  data-tip="custom"
+                  placeholder="custom"
+                />
+              </div>
+            </div>
+            <!-- end of select tip  input -->
+            <!--  num of ppl input -->
+            <div class="num-people">
+              <div class="flex" style="justify-content: space-between">
+                <p class="section-title">Number of People</p>
+                <span class="notice"></span>
+              </div>
+              <div class="input-container">
+                <img src="./images/icon-person.svg" alt="icon-person" />
+                <input class="check" type="text" placeholder="0" data-people />
+              </div>
+            </div>
+            <!-- end of num of ppl input -->
+          </div>
+          <div class="main-content__right grid">
+            <div class="total flex">
+              <p>
+                <span>Tip Amount</span> <br />
+                <span>/ person</span>
+              </p>
+              <p class="display-tip">$<span class="show-tip"></span>
+              </p>
+            </div>
+            <div class="total flex">
+              <p>
+                <span>Total</span> <br />
+                <span>/ person</span>
+              </p>
+              <p class="display-total">$<span span class="show-total"></span>
+              </p>
+            </div>
+            <div class="reset-btn">
+              <input type="button" value="Reset" data-reset />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
